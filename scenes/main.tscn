@@ -15,4 +15,4 @@ position = Vector2(160, 420)
 [node name="Instructions" type="Label" parent="."]
 offset_left = 24.0
 offset_top = 24.0
-text = "MOVE: Left / Right     JUMP: Space"
+text = "MOVE: Left / Right     JUMP: Space     ROLL: Shift"
