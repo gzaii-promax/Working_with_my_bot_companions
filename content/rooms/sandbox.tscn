@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3]
+
+[sub_resource type="RectangleShape2D" id="Rectangle_floor"]
+size = Vector2(960, 64)
+
+[sub_resource type="RectangleShape2D" id="Rectangle_wall"]
+size = Vector2(32, 540)
+
+[node name="Sandbox" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(480, 508)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("Rectangle_floor")
+
+[node name="Surface" type="Polygon2D" parent="Floor"]
+polygon = PackedVector2Array(-480, -32, 480, -32, 480, 32, -480, 32)
+color = Color(0.25, 0.3, 0.38, 1)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-16, 270)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+shape = SubResource("Rectangle_wall")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(976, 270)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+shape = SubResource("Rectangle_wall")

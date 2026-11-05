@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwwcmain000001"]
+[gd_scene load_steps=4 format=3 uid="uid://cwwcmain000001"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://content/rooms/sandbox.tscn" id="2_room"]
+[ext_resource type="PackedScene" path="res://systems/player/player.tscn" id="3_player"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_main")
+
+[node name="Sandbox" parent="." instance=ExtResource("2_room")]
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+position = Vector2(160, 420)
+
+[node name="Instructions" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+text = "MOVE: Left / Right     JUMP: Space"
