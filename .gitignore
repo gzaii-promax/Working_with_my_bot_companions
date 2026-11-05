@@ -1,0 +1,29 @@
+# Godot 4
+.godot/
+*.translation
+
+# Export / builds
+export_presets.cfg
+.export/
+build/
+*.pck
+*.zip
+
+# Godot mono (unused — engine is GDScript-only, kept for safety)
+.mono/
+data_*/
+mono_crash.*.json
+
+# Imported texture cache (Godot 3 leftover protection)
+.import/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor junk
+*.swp
+*~
+.idea/
+.vscode/
